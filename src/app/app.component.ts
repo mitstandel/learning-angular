@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
 
-// @ represent component decorator
-// template - View
-// class - Controller
-// styles - For better visualization
-// selector - custom tag to load the component
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,5 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crash_course';
-  greet = 'Hello world!'
+  studentDetails = {
+    name: 'Mitesh Tandel',
+    age: 40,
+    email: 'mitesh.tandel@gmail.com'
+  }
+  name = 'John Smith';
+  text = 'Mitesh';
+  bool = false;
+  list = ['Milk', 'Eggs', 'Flowers', 'Chicken', 'Tofu', 'Apples'];
+
+  greet(name: string):void {
+    alert(`Hello ${name}!`);
+  }
+
+  onKeyUp(e:any) {
+    this.text = e.target.value;
+  }
 }
